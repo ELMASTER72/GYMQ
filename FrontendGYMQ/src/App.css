@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body {
+    background-image: url(https://res.cloudinary.com/duxhiuugx/image/upload/v1683388596/fitness-1024x683_rrj8l4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+} 
+
+/* HOME */
+.home_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 98vw;
+}
+.menuNav.show {
+    display: block;
+}
+
+.toggle-button {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.user {
+    list-style: none;
+    font-family: 'Bruno Ace SC', cursive;
+}
+.user li {
+    width: 18rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin-top: -0.3rem;
+}
+.user a {
+    text-decoration: none;
+    color: #FFFF00;
+    cursor: pointer;
+}
+
+.user_menu {
+    list-style: none;
+    display: flex;
+}
+.menuUser {
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    margin-top: -0.2rem;
+    margin-right: -1rem;
+    list-style: none;
+    padding: 0.4rem;
+    width: 7rem;
+    border-radius: 1rem;
+}
+.menuUser svg {
+    width: 4rem;
+    height: 2rem;
+    color: #FFFF00;
+}
+.user-avatar {
+    border-left: solid 2px white;
+    border-radius: 1rem;
+
+}
+.name {
+    color: #FFFF00;
+    font-size: 3rem;
+}
+
+.information {
+    background-color: #fff;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 29rem;
+    border-radius: 2rem;
+    margin-left: -2rem;
+    height: 18rem;
+    margin-right: 1rem;
+    box-shadow: 38px 40px 104px 8px black;
+}
+.cuenta {
+    display: flex;
+    width: 28rem;
+    justify-content: space-around;
+}
+.information .user-avatar {
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #FFFF00;
+    border-radius: 2rem;
+}
+.information .name {
+    color: #000;
+    font-size: 2rem;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 5rem;
+    font-size: 1.3rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+.options {
+    border-top: solid 1px black;
+    margin-top: 1rem;
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+}
+.menu_perfil{
+    margin-right: 1rem;
+}
+.settings {
+    display: flex;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.settings svg {
+    margin-right: 0.3rem;
+    width: 2rem;
+    height: 1rem;
+}
+.settings a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+}
+
+.nav_bar {
+    display: flex;
+    list-style: none;
+}
+.nav_bar li {
+    height: 1.5rem;
+}
+.nav_bar a {
+    margin: 2rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Bruno Ace SC', cursive;
+    color: #FFFF00;
+}
+
+.home_main {
+    margin-top: 2rem;
+    padding: 0.5rem;
+}
+
+.main {
+    display: flex;
+    justify-content: end;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+.main_text h2 {
+    font-size: 4rem;
+    font-family: 'Bruno Ace SC', cursive;
+}
+.main_text h3 {
+    font-size: 2rem;
+    font-family: 'Kanit', sans-serif;
+    margin-top: -3rem;
+}
+
+.cssbuttons-io-button {
+    background: #FFFF00;
+    color: black;
+    font-family: 'Bruno Ace SC', cursive;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #FFFF00;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #FFFF00;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #000;
+}
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}  
+
+.modal1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-left: 35rem;
+    border-radius: 25px;
+    font-family: 'Bruno Ace SC', cursive;
+    width: 20rem;
+}
+.modal2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 35rem;
+    border-radius: 25px;
+    font-family: 'Bruno Ace SC', cursive;
+    width: 20rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+    background-color: #171717;
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    width: 30rem;
+    border: none;
+}
+  
+#heading {
+    text-align: center;
+    margin: 2em;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+  
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6rem;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #171717;
+    color: #fff;
+    padding: 0.10rem;
+    bottom: -10px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+.errmsg {
+    color: #FFFF00;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+  
+.input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: white;
+}
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+}
+  
+.form .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5em;
+}
+  
+.button1 {
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    font-family: 'Bruno Ace SC', cursive;
+    background-color: #252525;
+    color: white;
+}  
+.button1:hover {
+    background-color: black;
+    color: white;
+  }
+  
+.button2 {
+    padding: 0.5em;
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    font-family: 'Bruno Ace SC', cursive;
+    background-color: #252525;
+    color: white;
+}  
+.button2:hover {
+    background-color: black;
+    color: white;
+}
+  
+.button3 {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Bruno Ace SC', cursive;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+}  
+.button3:hover {
+    background-color: #FFFF00;
+    color: black;
+}
+.button4 {
+    margin-bottom: 3em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Bruno Ace SC', cursive;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+}  
+.button4:hover {
+    background-color: #FFFF00;
+    color: black;
+}
+
+.close {
+    cursor: pointer;
+    border: solid 1px black;
+    width: 24rem;
+    padding: 0.4rem;
+    border-radius: 1px 1px 25px 25px;
+    text-align: center;
+    background-color: #000;
+    color: #FFFF00;
+}
+
+.target {
+    display: flex;
+    align-items: end;
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    background: rgb(38, 38, 38);
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
+    margin: 1.7rem;
+}
+
+.imge {
+    height: 70px;
+    background-color: #FFFF00;
+}
+
+.imge .Usericon {
+    transform: translateX(10px) translateY(10px);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.imge .Username {
+    width: 100px;
+    height: 15px;
+    border-width: 10px;
+    border-radius: 5px;
+    border-color: #262626;
+    color: #262626;
+    font-size: 12px;
+    font-weight: bold;
+    transform: translateX(70px) translateY(-35px);
+    margin-top: -0.1rem;    
+}
+.Username a {
+    text-decoration: none;
+    color: #262626;
+}
+
+.imge .Id {
+    width: 100px;
+    height: 15px;
+    border-width: 10px;
+    border-radius: 5px;
+    border-color: #262626;
+    color: #262626;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translateX(70px) translateY(-25px);
+    margin-top: -1rem;
+}
+
+.Description {
+    border-color: #141414;
+    transform: translate(5px, 6px);
+    width: 180px;
+    height: 130px;
+    border-radius: 5px;
+}
+
+.social-media:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 2px;
+    transform: translatey(10px);
+    background: #414141;
+}
+
+.social-media a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-media a:last-child {
+    margin-right: 4;
+}
+
+.social-media a svg {
+    color: #FFFF00;
+    transform: translatex(25px) translateY(20px);
+    width: 35px;
+    fill: currentColor;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .menuNav {
+        display: none;
+    }
+    .user {
+        margin-left: 26rem;
+    }
+    .toggle-button {
+        display: block;
+        margin-top: -4rem;
+    }
+    .toggle {
+        background: transparent;
+        border: none;
+    }
+    .toggle svg {
+        width: 5rem;
+        height: 3rem;
+        color: #FFFF00;
+    }
+    .menu-item {
+        background-color: #fff;
+        width: 10rem;
+        font-family: 'Bruno Ace SC', cursive;
+        list-style: none;
+        margin-left: -1rem;
+        padding: 0.6rem;
+        box-shadow: 10px 10px 5px 0px;
+    }
+    .menu-item .item {
+        margin: 2rem;
+        border-bottom: solid 1px #000;
+    }
+    .modal1 {
+        margin-left: 15rem;
+    }
+    .modal2 {
+        margin-left: 15rem;
+    }
+}
+
+/* STORE */
+.store {
+    height: 100%;
+}
+
+.btns {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+  }
+  
+  .btns::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #FFFF00;
+    transition: .5s ease;
+  }
+  
+  .btns:hover {
+    color: #1e1e2b;
+    transition-delay: .5s;
+  }
+  
+  .btns:hover::before {
+    width: 100%;
+  }
+  
+  .btns::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: .4s ease;
+    z-index: -1;
+  }
+  
+  .btns:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+  }
+
+.buttons {
+    background-color: transparent;
+}
+.store-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.store-card .card {
+    width: 190px;
+    height: 246px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+    border: solid 2px #FFFF00;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+   }
+   
+   /*Image*/
+   .card-avatar {
+    --size: 60px;
+    background: linear-gradient(to top, #f1e1c1 0%, #FFFF00 100%);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transition: transform .2s ease;
+    margin-bottom: 1rem;
+   }
+   
+   
+   /*Card footer*/
+   .card-social {
+    transform: translateY(200%);
+    display: flex;
+    justify-content: space-around;
+    width: 10rem;
+    opacity: 0;
+    transition: transform .2s ease, opacity .2s ease;
+    margin-left: -1.5rem;
+   }
+   
+   .card-social__item {
+    list-style: none;
+   }
+   
+   .card-social__item svg {
+    display: block;
+    height: 18px;
+    width: 18px;
+    fill: #515F65;
+    cursor: pointer;
+    transition: fill 0.2s ease ,transform 0.2s ease;
+   }
+   
+   /*Text*/
+   .card-title {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 2rem;
+   }
+   
+   .card-subtitle {
+    color: #859ba8;
+    font-size: 0.8em;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    box-shadow: 0 8px 50px #23232333;
+   }
+   
+   .card:hover .card-info {
+    transform: translateY(-5%);
+   }
+   
+   .card:hover .card-social {
+    transform: translateY(100%);
+    opacity: 1;
+   }
+   
+   .card-social__item svg:hover {
+    fill: #232323;
+    transform: scale(1.1);
+   }
+   
+   .card-avatar:hover {
+    transform: scale(1.1);
+   }
+
+.card-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gym-target {
+    display: flex;
+    justify-content: space-around;
+}
+
+.infoGym {
+    display: flex;
+    justify-content: center;
+}
+.gyms {
+    background-color: #FFFF00;
+    box-shadow:  -5px 10px 29px 12px black;
+    background: rgba(241,231,103,1);
+    background: -moz-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(254,182,69,1)));
+    background: -webkit-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    background: -o-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    background: -ms-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    background: linear-gradient(to bottom, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=0 );
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+.imgGym {
+    border-radius: 2rem;
+    border: solid 2px #d5d1d1;
+    margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 4rem;
+    background-color: #FFF;
+    width: 8rem;
+    height: 6rem;
+}
+.dateGym {
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+    width: 40rem;
+}
+.imagePlace {
+    width: 38rem;
+    height: 15rem;
+    padding: 1rem;
+    box-shadow:  -5px 10px 29px 12px black;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.place {
+    height: 15rem;
+    width: 5rem;
+}
+.schedule {
+    margin: 2rem;
+}
+.schedule button {
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    border: solid 1px black;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    max-width: 100%;
+    height: 20rem;
+  }
+
+.worker {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: -4rem;
+}
+.workerGym {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+}
+.workerGym img {
+    width: 8rem;
+}
+
