@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
-body {
-    background-image: url(https://res.cloudinary.com/duxhiuugx/image/upload/v1683388596/fitness-1024x683_rrj8l4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-} 
+    body {
+        background-image: url(https://res.cloudinary.com/drnmx4xgd/image/upload/v1686261743/wp9273232-kettlebell-wallpapers_g6vsn7.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 98vh;
+        width: 98%;
+    }
+    @media  screen and (max-width: 720px) and (max-height: 1280px) {
+        body{
+            background: url(https://res.cloudinary.com/drnmx4xgd/image/upload/v1686261765/teahub.io-gym-wallpaper-hd-677914_uzqzjo.jpg)no-repeat center center fixed;
+            background-size: cover;
+        }
+    }
+    
+    
 
 /* HOME */
 .home_header {
@@ -179,11 +188,13 @@ body {
 .main_text h2 {
     font-size: 4rem;
     font-family: 'Bruno Ace SC', cursive;
+    color: #ffffff;
 }
 .main_text h3 {
     font-size: 2rem;
     font-family: 'Kanit', sans-serif;
     margin-top: -3rem;
+    color: #ffffff;
 }
 
 .cssbuttons-io-button {
@@ -715,6 +726,7 @@ body {
 .gym-target {
     display: flex;
     justify-content: space-around;
+    height: 100%;
 }
 
 .infoGym {
@@ -734,7 +746,9 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=0 );
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 50%;
+    
+
 }
 .imgGym {
     border-radius: 2rem;
