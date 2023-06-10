@@ -11,12 +11,12 @@ function App() {
   <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/home' element={<HomeUser/>}/>
-    <Route path='/routines' element={<Routines/>}/>
+    <Route path='/Rutinas' element={<Routines/>}/>
     <Route path='/routinesuser' element={<RoutinesUser/>}/>
-    <Route path='/gimnasios' element={<Gym/>}/>
+    <Route path='/Gimnasios' element={<Gym/>}/>
     <Route path='/info' element={<Information/>}/>
   </Routes>
-  );
+  ); 
 }
 
 export default App;

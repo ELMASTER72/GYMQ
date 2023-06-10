@@ -1,6 +1,6 @@
 import React from "react";
 import '../App.css'
-import CardComponent from "../Layouts/CardComponent";
+// import CardComponent from "../Layouts/CardComponent";
 import CardList from "../Layouts/CardList";
 import { NavBarUser } from "../Layouts/NavBarUser";
 
@@ -10,7 +10,7 @@ export function RoutinesUser() {
             <div className='home_header'>
                 <div><NavBarUser/></div>
             </div>
-            <CardComponent/>
+            {/* <CardComponent/> */}
             <div className="tarjetas">
                 <CardList/>
             </div>

@@ -16,9 +16,9 @@ export const HomeNavBar = () => {
               <ul className='nav_bar'>
                   <li style={{backgroundColor: '#FFFF00'}}><a style={{color: '#000'}} href="/">Inicio</a></li>
                   <li><a href="/">Planes</a></li>
-                  <li><a href="/routines">Rutinas</a></li> 
+                  <li><a href="/Rutinas">Rutinas</a></li> 
                   <li><a href="/">Tienda</a></li> 
-                  <li><a href="/gimnasios">Gimnasios</a></li> 
+                  <li><a href="/Gimnasios">Gimnasios</a></li> 
               </ul>
           </div>
             <ul className='user'>

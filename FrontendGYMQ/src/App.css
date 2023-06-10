@@ -160,11 +160,6 @@ body {
     color: #FFFF00;
 }
 
-.home_main {
-    margin-top: 2rem;
-    padding: 0.5rem;
-}
-
 .main {
     display: flex;
     justify-content: end;
@@ -707,10 +702,6 @@ body {
     transform: scale(1.1);
    }
 
-.card-list {
-    display: flex;
-    justify-content: space-around;
-}
 
 .gym-target {
     display: flex;
@@ -825,3 +816,162 @@ body {
     width: 8rem;
 }
 
+
+
+/* COMPONENTS */
+.customSelected {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    margin-top: -0.5rem;
+}
+.custom {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    width: 35%;
+}
+.checkbox {
+    padding: 1rem;
+    border: solid 4px #FFFF00;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 25%;
+}
+.checkbox:hover {
+    background-color: #FFFF00;
+}
+.selecteds {
+    display: flex;
+    align-items: center;
+}
+.selected {
+    display: flex;
+    height: 35%;
+    list-style: none;
+    background-color: black;
+    padding: 1rem;
+    color: #FFFF00;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+.selected li {
+    margin: 0.5rem;
+}
+.buttonCustom {
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #FFFF00;
+    color: #000;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    text-align: center;
+    margin-left: 1rem;
+}
+.buttonCustom:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+} 
+.buttonCustom:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+/* ROUTINES */
+.card-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* NAVBAR */
+.navBar {
+    width: 177%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bruno Ace SC', cursive;
+}
+.navBarList {
+    display: flex;
+    margin: 1rem;
+    width: 30%;
+    justify-content: space-evenly;
+}
+.navBarList li {
+    list-style: none;
+    padding: 1rem;
+    color: #FFFF00;
+}
+.navBarModal {
+    border: solid 1px #FFFF00;
+    font-family: 'Bruno Ace SC', cursive;
+    display: flex;
+    align-items: center;
+    color: #FFFF00;
+    background-color: #000;
+    height: 15%;
+    padding: 1rem;
+    border-radius: 9px;
+    cursor: pointer;
+}
+nav ul li.active {
+    background-color: #FFFF00;
+    color: black;
+    width: 14%;
+    text-align: center;
+    font-family: 'Bruno Ace SC', cursive;
+    border-radius: 10px;
+}
+
+/* HOME */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.homePage {
+    border: solid 1px white;
+    padding: 2rem;
+}
+
+/* MAIN */
+.mainPageInformation {
+    border: solid 1px red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+.mainPageInformation h2 {
+    font-size: 3rem;
+}
+
+/* MAINBUTTON */
+.mainButton {
+    background-color: white;
+    color: black;
+    border-radius: 10em;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;  
+}
+.mainButton:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 #FFFF00;  
+}
+.mainButton:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;  
+}
