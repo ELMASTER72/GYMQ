@@ -11,8 +11,8 @@ export const HomeNavBar = () => {
 
   return (
     <div>
-        <nav className='menu'>
-          <div className={`menuNav ${showMenu ? 'show' : ''}`}>
+        <nav className='navBar'>
+          <div className={`navBarList ${showMenu ? 'show' : ''}`}>
               <ul className='nav_bar'>
                   <li style={{backgroundColor: '#FFFF00'}}><a style={{color: '#000'}} href="/">Inicio</a></li>
                   <li><a href="/">Planes</a></li>

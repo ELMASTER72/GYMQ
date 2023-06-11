@@ -23,7 +23,7 @@ const Components = () => {
       setShowFilteredResult(true);
     }
   }
-
+ 
   const options = [
     { id: 1, name: 'Pierna', cards: [<CardLeg/>] },
     { id: 2, name: 'Brazo', cards: [<CardArms/>] },

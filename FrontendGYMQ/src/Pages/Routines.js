@@ -1,17 +1,15 @@
 import React from "react";
 import '../App.css'
-import { HomeNavBar } from "../Layouts/HomeNavBar";
 import Components from "../Layouts/Components";
 import CardList from "../Layouts/CardList";
+import { NavBar } from '../Layouts/NavBar/NavBar';
 
 export function Routines() {
     return (
         <div className="store">
-            <div className='home_header'>
-                <div><HomeNavBar/></div>
-            </div>
-            <Components/>
-            <div className="routineCards">
+            <div className='header'><NavBar/></div>
+            <div className="listRoutines">
+                <div className="containerRoutines"><Components/></div>
                 <CardList/>
             </div>
         </div>

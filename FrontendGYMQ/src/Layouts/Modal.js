@@ -167,7 +167,7 @@ const closeModal = () => {
 
 
   return (
-    <div>
+    <div className='windowsModal'>
         <a onClick={openFirstModal}>Ingresar /</a>
         <a onClick={openSecondModal}> Crear Cuenta</a>
       

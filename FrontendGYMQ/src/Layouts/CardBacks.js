@@ -26,7 +26,7 @@ const CardBacks = () => {
     ]
 
     return (
-        <div className="card-list">
+        <div className="cardsList">
             {data.map((cardData, index) => (
                 <Cards
                     key={index}
