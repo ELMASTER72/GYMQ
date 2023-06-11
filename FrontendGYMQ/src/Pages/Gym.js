@@ -1,17 +1,12 @@
 import '../App.css'
-import FileGym from '../Layouts/FileGym';
-import { HomeNavBar } from '../Layouts/HomeNavBar';
+import { NavBar } from '../Layouts/NavBar/NavBar';
+import GymCards from '../Ui/Cards/GymCards';
 
 export function Gym() {
     return ( 
         <div className='gym'>
-            <div className='home_header'>
-                <div><HomeNavBar/></div>
-            </div>
-            <div className='gym-target'>
-                <FileGym/>
-            </div>
-            
+            <div className='header'><NavBar/></div>
+            <div className='gymMain'><GymCards/></div>           
         </div>
     );
 }

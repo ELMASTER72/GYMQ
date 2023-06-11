@@ -1,5 +1,5 @@
 import React from 'react'
-
+ 
 const Target = ({image, textName, direction, imageGym}) => {
   return (
     <div className='target'>

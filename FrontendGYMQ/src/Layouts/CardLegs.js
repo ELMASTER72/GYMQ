@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../Ui/Cards";
+import Cards from "../Ui/Cards/Cards";
 
 const CardLegs = () => {
     const data = [
@@ -26,7 +26,7 @@ const CardLegs = () => {
     ]
 
     return (
-        <div className="card-list">
+        <div className="cardsList">
             {data.map((cardData, index) => (
                 <Cards
                     key={index}

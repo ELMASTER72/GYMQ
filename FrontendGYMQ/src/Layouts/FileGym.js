@@ -1,6 +1,6 @@
 import React from "react";
 import Target from "../Ui/Target";
-
+  
 const FileGym = () => {
     const data = [
         {

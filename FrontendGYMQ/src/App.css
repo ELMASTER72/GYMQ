@@ -378,6 +378,55 @@ body {
     transform: scale(0.98);
 }
 
+/* GYMCARDS */
+.gymsLocation {
+    width: 252px;
+    height: 265px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+    transition: 0.2s ease-in-out;
+}
+.gymImagen {
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: linear-gradient(#e66465, #9198e5);
+    display: flex;
+    align-items: top;
+    justify-content: right;  
+}
+.gymText {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;  
+}
+.gymBox {
+    margin-top: 15px;
+    width: 70%;
+    padding: 10px;
+    background-color: #e3fff9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;  
+}
+.gymText .h3 {
+
+}
+.gymText .p {
+
+}
+.gymBox .span {
+
+}
+.gymsLocation:hover {
+
+}
+
     .user_menu {
         list-style: none;
         display: flex;
@@ -661,13 +710,13 @@ body {
 
 /* responsive */
 @media (max-width: 768px) {
-    .menuNav {
+    .navBarList {
         display: none;
     }
     .user {
         margin-left: 26rem;
     }
-    .toggle-button {
+    .dropdownMenu {
         display: block;
         margin-top: -4rem;
     }

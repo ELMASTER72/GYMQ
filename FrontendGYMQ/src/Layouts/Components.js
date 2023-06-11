@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import CardLeg from './CardLeg';
+import CardLegs from './CardLegs';
 import CardGluteus from './CardGluteus';
+import CardGluteu from './CardGluteu';
 import CardArms from './CardArms';
+import CardArm from './CardArm';
 import CardBacks from './CardBacks';
+import CardBack from './CardBack';
 
 const Components = () => {
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -25,10 +29,10 @@ const Components = () => {
   }
  
   const options = [
-    { id: 1, name: 'Pierna', cards: [<CardLeg/>] },
-    { id: 2, name: 'Brazo', cards: [<CardArms/>] },
-    { id: 3, name: 'Espalda', cards: [<CardBacks/>] },
-    { id: 4, name: 'Gluteo', cards: [<CardGluteus/>] }
+    { id: 1, name: 'Pierna', cards: [<div><CardLeg/><CardLegs/></div>] },
+    { id: 2, name: 'Brazo', cards: [<div><CardArms/><CardArm/></div>] },
+    { id: 3, name: 'Espalda', cards: [<div><CardBacks/><CardBack/></div>] },
+    { id: 4, name: 'Gluteo', cards: [<div><CardGluteus/><CardGluteu/></div>] }
   ];
   
   return (

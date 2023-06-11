@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../Ui/Cards";
+import Cards from "../Ui/Cards/Cards";
 
 const CardArms = () => {
     const data = [

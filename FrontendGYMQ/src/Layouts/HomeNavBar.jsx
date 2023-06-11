@@ -7,7 +7,7 @@ export const HomeNavBar = () => {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu)
-  }
+  } 
 
   return (
     <div>
