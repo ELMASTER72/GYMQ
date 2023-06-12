@@ -7,7 +7,8 @@ const DataGym = () => {
             id: 1, 
             imagen: 'https://res.cloudinary.com/duxhiuugx/image/upload/v1686521594/humphrey-muleba-LOA2mTj1vhc-unsplash_gvos4x.jpg', 
             name: 'Smart Power Gym', 
-            place: 'Tesalónica Apartamentos, Cl. 23 #37-25, Armenia, Quindío'
+            place: 'Tesalónica Apartamentos, Cl. 23 #37-25, Armenia, Quindío',
+            link: '/Informacion'
         },
 
         {
@@ -86,7 +87,7 @@ const DataGym = () => {
             name:'Muscle Center Gym', 
             place:'# a 19-20, Cl. 45 #192, Armenia, Quindío'
         },
-
+ 
         {
             id: 13, 
             imagen:'https://res.cloudinary.com/duxhiuugx/image/upload/v1686521594/humphrey-muleba-LOA2mTj1vhc-unsplash_gvos4x.jpg', 
@@ -158,7 +159,13 @@ const DataGym = () => {
             {targets
                 .filter((target) => target.name.toLowerCase().includes(search.toLowerCase()))
                 .map((target) => (
-                        <GymCards key={target.id} imagen={target.imagen} name={target.name} place={target.place}/>
+                        <GymCards 
+                            key={target.id} 
+                            imagen={target.imagen} 
+                            name={target.name} 
+                            place={target.place}
+                            link={target.link}
+                        />
                         ))
             }
             </div>

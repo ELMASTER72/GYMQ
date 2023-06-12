@@ -17,6 +17,8 @@ const ModalWindow = () => {
     let subtitle;
     const [isFirstModalOpen, setIsFirstModalOpen] = useState(false);
     const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
+    const [isFourthModalOpen, setIsFourthModalOpen] = useState(false);
+    const [isThirdModalOpen, setIsThirdModalOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate();
 
@@ -27,6 +29,8 @@ const ModalWindow = () => {
     const openFirstModal = () => {
         setIsFirstModalOpen(true)
         setIsSecondModalOpen(false);
+        setIsFourthModalOpen(false)
+        setIsThirdModalOpen(false)
     }
     const closeFirstModal = () => {
         setIsFirstModalOpen(false);
@@ -41,14 +45,37 @@ const ModalWindow = () => {
   const openSecondModal = () => {
     setIsSecondModalOpen(true);
     setIsFirstModalOpen(false);
+    setIsThirdModalOpen(false)
 }
 const closeSecondModal = () => {
     setIsSecondModalOpen(false);
 }
 
+const openThirdModal = () => {
+    setIsThirdModalOpen(true);
+    setIsFirstModalOpen(false)
+    setIsFourthModalOpen(false)
+    setIsSecondModalOpen(false)
+}
+const closeThirdModal = () => {
+    setIsThirdModalOpen(false);
+}
+
+const openFourthModal = () => {
+    setIsFourthModalOpen(true)
+    setIsSecondModalOpen(false);
+    setIsFirstModalOpen(false);
+    setIsThirdModalOpen(false)
+}
+const closeFourthModal = () => {
+    setIsFourthModalOpen(false)
+}
+
 const closeModal = () => {
     setIsFirstModalOpen(false)
     setIsSecondModalOpen(false)
+    setIsFourthModalOpen(false)
+    setIsThirdModalOpen(false)
 }
 
     const userRef = useRef();
@@ -205,7 +232,22 @@ const closeModal = () => {
                     <button onClick={handleSubmit2} onChange={handleLogin} className="button1">Ingresar</button>
                     <button onClick={openSecondModal} className="button2">Registrarse</button>
                 </div>
-                <button class="button4">¿Olvidaste tu contraseña?</button>
+                <button onClick={openThirdModal} class="button4">¿Olvidaste tu contraseña?</button>
+            </form>
+            <a className='close' onClick={closeModal}>Cerrar</a>
+        </Modal>
+        <Modal className='modal1' isOpen={isThirdModalOpen} onClose={closeThirdModal} onAfterOpen={afterOpenModal}>
+            <form className="form">
+                <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Recuperar Contraseña</h2>
+                <div className="field">
+                    <svg className="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
+                    </svg>
+                    <input autocomplete="off" placeholder="Correo" className="input-field" type="text"/>
+                </div>
+                <div className="btn">
+                    <button className="button4">Enviar</button>
+                </div>
             </form>
             <a className='close' onClick={closeModal}>Cerrar</a>
         </Modal>
@@ -326,7 +368,32 @@ const closeModal = () => {
                     <button className="button1">Crear Cuenta</button>
                     <button onClick={openFirstModal} className="button2">Iniciar Sesión</button>
                 </div>
-                <button class="button4">¡Registra tu Gimnasio!</button>
+                <button onClick={openFourthModal} class="button4">¡Registra tu Gimnasio!</button>
+            </form>
+            <a className='close' onClick={closeModal}>Cerrar</a>
+        </Modal>
+        <Modal style={{border: 'none'}} className='modal2' isOpen={isFourthModalOpen} onClose={closeFourthModal} onAfterOpen={afterOpenModal}>
+        <form className="form">
+                <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Registrar Gimnasio</h2>
+                <div className="field">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
+                    <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                    <input autocomplete="off" placeholder="Nombre Gimnasio" className="input-field" type="text"/>
+                </div>
+                <div className="field">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
+                </svg>
+                    <input autocomplete="off" placeholder="Direccion" className="input-field" type="text"/>
+                </div>
+                <div className="field">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
+                    <input autocomplete="off" placeholder="Telefono" className="input-field" type="text"/>
+                </div>
+                <button class="button4">¡Registrar!</button>
             </form>
             <a className='close' onClick={closeModal}>Cerrar</a>
         </Modal>

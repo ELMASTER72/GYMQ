@@ -6,6 +6,7 @@ import { RoutinesUser } from './Pages/RoutinesUser';
 import { Gym } from './Pages/Gym';
 import { Information } from './Pages/Information';
 import { Store } from './Pages/Store';
+import { Gimnasios } from './Pages/Gimnasios';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Route path='/' element={<Home/>}/>
     <Route path='/Rutinas' element={<Routines/>}/>
     <Route path='/Gimnasios' element={<Gym/>}/>
+    <Route path='/Informacion' element={<Gimnasios/>}/>
     <Route path='/Tienda' element={<Store/>}/>
     <Route path='/home' element={<HomeUser/>}/>
     <Route path='/routinesuser' element={<RoutinesUser/>}/>
