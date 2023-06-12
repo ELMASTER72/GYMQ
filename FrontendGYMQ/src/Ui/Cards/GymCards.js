@@ -1,14 +1,14 @@
 import React from 'react'
 
-const GymCards = () => {
+const GymCards = ( {imagen, name, place} ) => {
     return (
         <div className='gymsLocation'>
-            <div className='gymImagen'></div>
+            <div><img className='gymImagen' src={imagen} /></div>
             <div className='gymText'>
-                <p className='h3'>Nombre</p>
-                <p className='p'>Lugar</p>
+                <p className='h3'>{name}</p>
+                <p className='p'>{place}</p>
                 <div className='gymBox'>
-                    <p className='span'>Investigar</p>
+                    <a href='/' className='span'>Investigar</a>
                 </div>
             </div>
         </div>
