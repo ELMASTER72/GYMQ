@@ -5,15 +5,17 @@ import { Routines } from './Pages/Routines';
 import { RoutinesUser } from './Pages/RoutinesUser';
 import { Gym } from './Pages/Gym';
 import { Information } from './Pages/Information';
+import { Store } from './Pages/Store';
 
 function App() {
   return (
   <Routes>
     <Route path='/' element={<Home/>}/>
-    <Route path='/home' element={<HomeUser/>}/>
     <Route path='/Rutinas' element={<Routines/>}/>
-    <Route path='/routinesuser' element={<RoutinesUser/>}/>
     <Route path='/Gimnasios' element={<Gym/>}/>
+    <Route path='/Tienda' element={<Store/>}/>
+    <Route path='/home' element={<HomeUser/>}/>
+    <Route path='/routinesuser' element={<RoutinesUser/>}/>
     <Route path='/info' element={<Information/>}/>
   </Routes>
   ); 
