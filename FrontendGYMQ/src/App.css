@@ -485,6 +485,9 @@ body {
 }
 
 /* DATASTORE */
+.products {
+    background-color: white;
+}
 .containerProducts {
     display: flex;
     justify-content: space-between;

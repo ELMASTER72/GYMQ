@@ -5,6 +5,7 @@ const DataStore = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [cartItems, setCartItems] = useState([]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -12,17 +13,23 @@ const DataStore = () => {
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
-    setSearchQuery(''); // Restablece el término de búsqueda al seleccionar una categoría
+    setSearchQuery('');
     setIsOpen(false);
-    // Aquí puedes llamar a una función para cargar las tarjetas relacionadas con la categoría seleccionada
-    // por ejemplo: loadCardsByCategory(category);
   };
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  // Ejemplo de lista de tarjetas (cada tarjeta es un objeto con propiedades específicas)
+  const addToCart = (item) => {
+    setCartItems([...cartItems, item]);
+  };
+
+  const removeFromCart = (item) => {
+    const updatedCart = cartItems.filter((cartItem) => cartItem.id !== item.id);
+    setCartItems(updatedCart);
+  };
+
   const cards = [
 
     // Ropa
@@ -569,23 +576,20 @@ const DataStore = () => {
     },
   ];
 
-  // Filtra las tarjetas según la categoría seleccionada y el término de búsqueda
   const filteredCards = cards.filter((card) => {
     if (selectedCategory && card.category !== selectedCategory) {
-      return false; // Ignora las tarjetas que no coinciden con la categoría seleccionada
+      return false;
     }
     if (searchQuery && !card.title.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false; // Ignora las tarjetas que no coinciden con el término de búsqueda
+      return false;
     }
     return true;
   });
 
   return (
     <div className="products">
-        <div className='containerProducts'>
-            <button className="mainButton" onClick={toggleDropdown}>
-                Categorías
-            </button>
+      <div className='containerProducts'>
+        <button className="mainButton" onClick={toggleDropdown}>Categorías</button>
             {selectedCategory && (
                 <div className="searchProducts">
                 <input
@@ -607,25 +611,47 @@ const DataStore = () => {
       )}
       {selectedCategory && (
         <div className="selectedCategory">
-          {filteredCards.length > 0 ? (
-            <ul className='selectedProducts'>
-              {filteredCards.map((card) => (
+          <div className="selectedProducts">
+            {filteredCards.length > 0 ? (
+              filteredCards.map((card) => (
                 <StoreCards
-                    key={card.id}
-                    title={card.title}
-                    description={card.description}
-                    price={card.price}
-                    image={card.image}
+                  key={card.id}
+                  title={card.title}
+                  description={card.description}
+                  price={card.price}
+                  image={card.image}
+                  mandarCarrito={addToCart(card)}
                 />
-              ))}
-            </ul>
-          ) : (
-            <p>No hay tarjetas disponibles.</p>
-          )}
+                  // <button onClick={() => addToCart(card)}>Agregar al carrito</button>
+              ))
+            ) : (
+              <p>No hay tarjetas disponibles.</p>
+            )}
+          </div>
         </div>
       )}
+      <div className="cart">
+        <h3>Carrito de compras</h3>
+        {cartItems.length > 0 ? (
+          <ul>
+            {cartItems.map((item, index) => (
+              <StoreCards
+                key={index}
+                title={item.title}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+                mandarCarrito={removeFromCart(item)}
+              />
+            ))}
+          </ul>
+        ) : (
+          <p>El carrito está vacío.</p>
+        )}
+      </div>
     </div>
   );
 };
 
 export default DataStore;
+
