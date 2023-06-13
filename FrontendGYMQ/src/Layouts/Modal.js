@@ -1,10 +1,10 @@
-import React, {useState,useRef,useEffect,useContext} from 'react';
+import React, {useState,useRef,useEffect} from 'react';
 import Modal from 'react-modal';
 import { useNavigate } from 'react-router-dom'
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from '../api/axios';
-import AuthContext from "../context/AuthProvider";
+import useAuth from '../hooks/useAuth';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -153,7 +153,7 @@ const closeModal = () => {
         }
     }
 
-    const {setAuth} = useContext(AuthContext);
+    const {setAuth} = useAuth();
 
     useEffect(() => {
         setErrMsg('');
