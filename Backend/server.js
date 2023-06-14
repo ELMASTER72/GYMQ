@@ -12,7 +12,7 @@ const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
-
+const controllers = require("./Routes/api/Products")
 // Conecta a MongoDB
 connectDB();
 
@@ -39,6 +39,12 @@ app.use(cookieParser());
 app.use('/', express.static(path.join(__dirname, '/public')));
 
 // rutas
+app.get("/products", controllers.getProducts);
+app.get("/products-cart", controllers.getProductsCart);
+app.post("/products-cart", controllers.addProductCart);
+app.put("/products-cart/:productId", controllers.putProduct);
+app.delete("/products-cart/:productId", controllers.deleteProduct);
+
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
