@@ -7,8 +7,8 @@ import UserAvatar from "./userAvatar";
 
 const PerfilUsuario = () => {
     const usuario = {
-        nombre: 'AnaSofia',
-        correo: 'anasofiaricardoaguilar@gmail.com'
+        nombre: 'ELMASTER72',
+        correo: 'maxteilor2008@gmail.com'
     }
 
     return (
@@ -19,10 +19,10 @@ const PerfilUsuario = () => {
                 </svg>
             </MenuButton>}>
             </Menu> */}
-            <Menu menuButton={<MenuButton className='menuUser'><UserAvatar name='Ana Sofia'/></MenuButton>}>
+            <Menu menuButton={<MenuButton className='menuUser'><UserAvatar name='Max Teilor'/></MenuButton>}>
                 <div className="information">
                     <div className="cuenta">
-                        <div className="information-name"><UserAvatar name='Ana Sofia'/></div>
+                        <div className="information-name"><UserAvatar name='Max Teilor'/></div>
                         <div className="info">
                             <MenuItem>{usuario.nombre}</MenuItem>
                             <MenuItem>{usuario.correo}</MenuItem>

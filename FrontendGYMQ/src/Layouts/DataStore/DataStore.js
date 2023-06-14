@@ -7,7 +7,7 @@ const DataStore = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [cartItems, setCartItems] = useState([]);   
   const [showCartModal, setShowCartModal] = useState(false);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState("");
   const [showSecondModal, setShowSecondModal] = useState(false);
 
   const toggleDropdown = () => {
@@ -59,7 +59,7 @@ const DataStore = () => {
       title: 'Tarjeta 1',
       category: 'Categoría 1',
       description: 'Esta es la descripción de la Tarjeta 1',
-      price: '000',
+      price: '80000',
       image: 'https://res.cloudinary.com/duxhiuugx/image/upload/v1686584437/resilience-cbd-J9yRqbAuPTU-unsplash_eepjhw.jpg',
     },
     
@@ -68,7 +68,7 @@ const DataStore = () => {
       title: 'Tarjeta 2',
       category: 'Categoría 1',
       description: 'Esta es la descripción de la Tarjeta 2',
-      price: '000',
+      price: '20000',
       image: 'https://res.cloudinary.com/duxhiuugx/image/upload/v1686584437/resilience-cbd-J9yRqbAuPTU-unsplash_eepjhw.jpg',
     },
 
