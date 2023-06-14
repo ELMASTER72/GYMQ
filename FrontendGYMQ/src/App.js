@@ -9,6 +9,7 @@ import { Store } from './Pages/Store';
 import { Gimnasios } from './Pages/Gimnasios';
 import Logins from './Layouts/Login';
 import RequireAuth from './Layouts/RequireAuth';
+import { Payment } from './Pages/Payment';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Route path='/Rutinas' element={<Routines/>}/>
     <Route path='/Gimnasios' element={<Gym/>}/>
     <Route path='/Informacion' element={<Gimnasios/>}/>
+    <Route path='/Pago' element={<Payment/>}/>
     <Route element={<RequireAuth allwedRoles={[2001]}/>}>
       
     </Route>

@@ -621,6 +621,20 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.cartsButton {
+    margin-top: 2rem;
+}
+.buy {
+    text-decoration: none;
+    border: solid 1px black;
+    padding: 1rem;
+    margin-right: 1rem;
+    color: #000;
+}
+.buy:hover {
+    background-color: #000;
+    color: #FFFF00;
+}
 .buttonCart {
     background-color: transparent;
     cursor: pointer;

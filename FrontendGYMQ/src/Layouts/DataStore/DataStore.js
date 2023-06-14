@@ -7,7 +7,7 @@ const DataStore = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [cartItems, setCartItems] = useState([]);   
   const [showCartModal, setShowCartModal] = useState(false);
-
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -25,11 +25,13 @@ const DataStore = () => {
 
   const addToCart = (item) => {
     setCartItems([...cartItems, item]);
+    setTotalPrice(totalPrice + item.price);
   };
 
   const removeFromCart = (item) => {
     const updatedCart = cartItems.filter((cartItem) => cartItem.id !== item.id);
     setCartItems(updatedCart);
+    setTotalPrice(totalPrice - item.price);
   };
 
   const openCartModal = () => {
@@ -565,7 +567,7 @@ const DataStore = () => {
       title: 'Tarjeta 18',
       category: 'Categoría 3',
       description: 'Esta es la descripción de la Tarjeta 18',
-      price: '000',
+      price: 23900,
       image: 'https://res.cloudinary.com/duxhiuugx/image/upload/v1686584437/resilience-cbd-J9yRqbAuPTU-unsplash_eepjhw.jpg',
     },
 
@@ -574,7 +576,7 @@ const DataStore = () => {
       title: 'Tarjeta 19',
       category: 'Categoría 3',
       description: 'Esta es la descripción de la Tarjeta 19',
-      price: '000',
+      price: 19900,
       image: 'https://res.cloudinary.com/duxhiuugx/image/upload/v1686584437/resilience-cbd-J9yRqbAuPTU-unsplash_eepjhw.jpg',
     },
 
@@ -583,7 +585,7 @@ const DataStore = () => {
       title: 'Tarjeta 20',
       category: 'Categoría 3',
       description: 'Esta es la descripción de la Tarjeta 20',
-      price: '000',
+      price: 20000,
       mandarCarrito: '',
       image: 'https://res.cloudinary.com/duxhiuugx/image/upload/v1686584437/resilience-cbd-J9yRqbAuPTU-unsplash_eepjhw.jpg',
     },
@@ -639,7 +641,11 @@ const DataStore = () => {
                 ) : (
                   <p>El carrito está vacío.</p>
                 )}
-                <button className='buttonCart' onClick={closeCartModal}>Cerrar</button>
+                <p>Precio total: {totalPrice}</p>
+                <div className='cartsButton'>
+                  <a className='buy' href='/Pago'>COMPRAR!</a>
+                  <button className='buttonCart' onClick={closeCartModal}>Cerrar</button>
+                </div>
                 </div>
               </div>
             )}
