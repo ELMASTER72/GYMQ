@@ -8,6 +8,7 @@ const DataStore = () => {
   const [cartItems, setCartItems] = useState([]);   
   const [showCartModal, setShowCartModal] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [showSecondModal, setShowSecondModal] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -40,6 +41,14 @@ const DataStore = () => {
 
   const closeCartModal = () => {
     setShowCartModal(false);
+  };
+
+  const openSecondModal = () => {
+    setShowSecondModal(true);
+  };
+
+  const closeSecondModal = () => {
+    setShowSecondModal(false);
   };
 
   const cards = [
@@ -616,7 +625,7 @@ const DataStore = () => {
                 />
                 </div>
             )}
-            <button className='buttonCart' onClick={openCartModal}>
+            <button className='buttonCart' onClick={openCartModal} >
               <svg className='iconCart' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
                 <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
               </svg>
@@ -643,8 +652,51 @@ const DataStore = () => {
                 )}
                 <p>Precio total: {totalPrice}</p>
                 <div className='cartsButton'>
-                  <a className='buy' href='/Pago'>COMPRAR!</a>
+                  <a className='buy' onClick={openSecondModal}>COMPRAR!</a>
                   <button className='buttonCart' onClick={closeCartModal}>Cerrar</button>
+                </div>
+              </div>
+            </div>
+            )}
+            {showSecondModal && (
+              <div className="cartModal">
+                <div className="cartModalContent">
+                  <h3>Compras GYMQ</h3>
+                  <div className='field'>
+                    <svg className='input-icon' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                    </svg>
+                    <input className='input-field' placeholder='Nombre y Apellidos'/>
+                  </div>
+                  <div style={{marginTop:'1rem'}} className="field">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
+                    </svg>
+                    <input autocomplete="off" placeholder="Direccion" className="input-field" type="text"/>
+                  </div>
+                  <div style={{marginTop:'1rem'}} className="field">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-front" viewBox="0 0 16 16">
+                      <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                      <path d="M2 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                    <input autocomplete="off" placeholder="Numero de Tarjeta" className="input-field" type="text"/>
+                  </div>
+                  <div style={{marginTop:'1rem'}} className="field">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                    </svg>
+                    <input autocomplete="off" placeholder="Fecha de Vencimiento" className="input-field" type="date"/>
+                  </div>
+                  <div style={{marginTop:'1rem'}} className="field">
+                      <svg className="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+                      </svg>
+                      <input autocomplete="off" placeholder="Codigo de Seguridad" className="input-field" type="text"/>
+                  </div>
+                  <p>Precio total: {totalPrice}</p>
+                  <div className='cartsButton'>
+                    <a className='buy'>PAGAR!</a>
+                    <button className='buttonCart' onClick={closeSecondModal}>Cerrar</button>
                 </div>
                 </div>
               </div>

@@ -1,19 +1,17 @@
 import React from "react";
 import '../App.css'
-// import CardComponent from "../Layouts/CardComponent";
+import Components from "../Layouts/Components";
 import CardList from "../Layouts/CardList";
-import { NavBarUser } from "../Layouts/NavBarUser";
+import { UserNavBar } from '../Layouts/NavBar/UserNavBar';
 
 export function RoutinesUser() {
     return (
         <div className="store">
-            <div className='home_header'>
-                <div><NavBarUser/></div>
-            </div>
-            {/* <CardComponent/> */}
-            <div className="tarjetas">
+            <div className='header'><UserNavBar/></div>
+            <div className="listRoutines">
+                <div className="containerRoutines"><Components/></div>
                 <CardList/>
             </div>
         </div>
     )
-}
+} 

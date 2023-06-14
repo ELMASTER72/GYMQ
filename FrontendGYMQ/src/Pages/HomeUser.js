@@ -1,16 +1,12 @@
 import '../App.css'
-import { MainHome } from '../Layouts/MainHome';
-import { NavBarUser } from '../Layouts/NavBarUser';
+import { UserNavBar } from '../Layouts/NavBar/UserNavBar';
+import { Main } from '../Layouts/Main/Main';
 
 export function HomeUser() {
     return ( 
         <div>
-            <div className='home_header'>
-                <div><NavBarUser/></div>
-            </div>
-            <div className='home_main'>
-                <div><MainHome/></div>
-            </div>
-        </div>
+            <div className='header'><UserNavBar/></div>
+            <div className='homePage'><Main/></div>
+        </div> 
     );
 }

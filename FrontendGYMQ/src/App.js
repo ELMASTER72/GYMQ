@@ -9,23 +9,25 @@ import { Store } from './Pages/Store';
 import { Gimnasios } from './Pages/Gimnasios';
 import Logins from './Layouts/Login';
 import RequireAuth from './Layouts/RequireAuth';
-import { Payment } from './Pages/Payment';
+import { StoreUser } from './Pages/StoreUser';
+import { GymUser } from './Pages/GymUser';
 
 function App() {
   return (
   <Routes>
     <Route path='/' element={<Home/>}/>
+    <Route path='/Home' element={<HomeUser/>}/>
     <Route path='/login' element={<Logins/>}/>
     <Route path='/Rutinas' element={<Routines/>}/>
+    <Route path='/Usuario-Rutinas' element={<RoutinesUser/>}/>
     <Route path='/Gimnasios' element={<Gym/>}/>
+    <Route path='/Usuario-Gimnasios' element={<GymUser/>}/>
     <Route path='/Informacion' element={<Gimnasios/>}/>
-    <Route path='/Pago' element={<Payment/>}/>
     <Route element={<RequireAuth allwedRoles={[2001]}/>}>
       
     </Route>
+    <Route path='/Usuario-Tienda' element={<StoreUser/>}/>
     <Route path='/Tienda' element={<Store/>}/>
-    <Route path='/home' element={<HomeUser/>}/>
-    <Route path='/routinesuser' element={<RoutinesUser/>}/>
     <Route path='/info' element={<Information/>}/>
   </Routes>
   ); 
