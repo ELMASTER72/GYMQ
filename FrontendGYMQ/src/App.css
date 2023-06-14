@@ -7,7 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 98vh;
+    height: 98%;
     width: 98vw;
 }
 @media  screen and (max-width: 720px) and (max-height: 1280px) {
@@ -593,8 +593,46 @@ body {
 }
 
 /* DATASTORE */
+.cartModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.cartModalContent {
+    width: 750px;
+    background-color: #fff;
+    padding: 20px;
+    max-height: 80vh; /* Ajusta este valor según tus necesidades */
+    overflow: auto;
+    text-align: center;
+}
+.cartModalContent h3 {
+    font-size: 2rem;
+}
+.contentModal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.buttonCart {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.buttonCart svg {
+    width: 40px;
+    height: 40px;
+}
 .products {
     background-color: white;
+    margin-top: 2rem;
 }
 .containerProducts {
     display: flex;
