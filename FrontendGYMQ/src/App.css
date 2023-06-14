@@ -941,20 +941,22 @@ body {
 }
 
 .options {
-    width: 24rem;
+    width: 22rem;
     display: flex;
     flex-direction: column;
+
     
 }
 .menu_perfil{
     margin-right: 1rem;
     
+    
 }
 .settings {
     display: flex;
-    padding: 0.3rem;
+    padding: 0.2rem;
     align-items: center;
-    margin: 0.2rem;
+    margin: 0.1rem;
 }
 .settings svg {
     margin-right: 0.3rem;
