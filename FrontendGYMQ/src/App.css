@@ -7,7 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 98%;
+    height: 98vh;
     width: 98vw;
 }
 @media  screen and (max-width: 720px) and (max-height: 1280px) {
@@ -643,9 +643,10 @@ body {
 .buttonCart svg {
     width: 40px;
     height: 40px;
+    color: #FFFF00;
 }
 .products {
-    background-color: white;
+    background-color: rgb(22, 22, 21);
     margin-top: 2rem;
 }
 .containerProducts {
