@@ -7,7 +7,7 @@ const DataStore = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [cartItems, setCartItems] = useState([]);   
   const [showCartModal, setShowCartModal] = useState(false);
-  const [totalPrice, setTotalPrice] = useState("");
+  const [totalPrice, setTotalPrice] = useState(0);
   const [showSecondModal, setShowSecondModal] = useState(false);
 
   const toggleDropdown = () => {
